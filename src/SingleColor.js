@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import rgbToHex from './utils'
 
-const SingleColor = ({rgb, weight, index, x, error }) => {   //Applying CSS Inline styilng
+const SingleColor = ({rgb, weight, index, x, error, error2 }) => {   //Applying CSS Inline styilng
   const [alert, setAlert] = useState(false);
   const hex = rgbToHex(...rgb);
   const bcg = rgb.join(',');
@@ -10,7 +10,7 @@ const SingleColor = ({rgb, weight, index, x, error }) => {   //Applying CSS Inli
     const timeout = setTimeout(()=>{setAlert(false)}, 2000);
     return ()=>{clearTimeout(timeout)};
   },[alert]);
-  return <article className={`color ${(index > (100 / x) && error == false) && 'color-light'}`} style={{backgroundColor: `rgb(${bcg})`}} // Apply dark color for tints, and light for shades
+  return <article className={`color ${(index > (100 / x) ) && 'color-light'}`} style={{backgroundColor: `rgb(${bcg})`}} // Apply dark color for tints, and light for shades
   onClick={()=> {
     setAlert(true);
     navigator.clipboard.writeText(hex); // Copy to clipboard
