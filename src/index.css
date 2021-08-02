@@ -1,40 +1,29 @@
-/*
-=============== 
-Variables
-===============
-*/
-
 :root {
-  /* dark shades of primary color*/
-  --clr-primary-1: hsl(205, 86%, 17%);
-  --clr-primary-2: hsl(205, 77%, 27%);
-  --clr-primary-3: hsl(205, 72%, 37%);
-  --clr-primary-4: hsl(205, 63%, 48%);
-  /* primary/main color */
-  --clr-primary-5: hsl(205, 78%, 60%);
-  /* lighter shades of primary color */
-  --clr-primary-6: hsl(205, 89%, 70%);
-  --clr-primary-7: hsl(205, 90%, 76%);
-  --clr-primary-8: hsl(205, 86%, 81%);
-  --clr-primary-9: hsl(205, 90%, 88%);
-  --clr-primary-10: hsl(205, 100%, 96%);
-  /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
-  /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
-  --clr-grey-6: hsl(209, 23%, 60%);
-  --clr-grey-7: hsl(211, 27%, 70%);
-  --clr-grey-8: hsl(210, 31%, 80%);
-  --clr-grey-9: hsl(212, 33%, 89%);
-  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-primary-1: #063251;
+  --clr-primary-2: #104e7a;
+  --clr-primary-3: #1a6aa2;
+  --clr-primary-4: #2d87c8;
+  --clr-primary-5: #49a6e9;
+  --clr-primary-6: #6ebef7;
+  --clr-primary-7: #8bcbf9;
+  --clr-primary-8: #a5d5f8;
+  --clr-primary-9: #c5e5fc;
+  --clr-primary-10: #ebf7ff;
+  --clr-grey-1: #102a42;
+  --clr-grey-2: #243a52;
+  --clr-grey-3: #324d67;
+  --clr-grey-4: #48647f;
+  --clr-grey-5: #617d98;
+  --clr-grey-6: #829ab0;
+  --clr-grey-7: #9eb2c7;
+  --clr-grey-8: #bcccdc;
+  --clr-grey-9: #dae2ec;
+  --clr-grey-10: #f1f5f8;
   --clr-white: #fff;
-  --clr-red-dark: hsl(360, 67%, 44%);
-  --clr-red-light: hsl(360, 71%, 66%);
-  --clr-green-dark: hsl(125, 67%, 44%);
-  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-red-dark: #bb2525;
+  --clr-red-light: #e66b6b;
+  --clr-green-dark: #25bb32;
+  --clr-green-light: #6be675;
   --clr-black: #222;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
@@ -44,15 +33,9 @@ Variables
   --max-width: 1170px;
   --fixed-width: 620px;
 }
-/*
-=============== 
-Global Styles
-===============
-*/
-
 *,
-::after,
-::before {
+:after,
+:before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -60,7 +43,9 @@ Global Styles
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: #f1f5f8;
   background: var(--clr-grey-10);
+  color: #102a42;
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -75,6 +60,7 @@ h1,
 h2,
 h3,
 h4 {
+  letter-spacing: 0.1rem;
   letter-spacing: var(--spacing);
   text-transform: capitalize;
   line-height: 1.25;
@@ -95,6 +81,7 @@ h4 {
 }
 p {
   margin-bottom: 1.25rem;
+  color: #617d98;
   color: var(--clr-grey-5);
 }
 @media screen and (min-width: 800px) {
@@ -107,10 +94,8 @@ p {
   h3 {
     font-size: 1.75rem;
   }
+  body,
   h4 {
-    font-size: 1rem;
-  }
-  body {
     font-size: 1rem;
   }
   h1,
@@ -120,48 +105,35 @@ p {
     line-height: 1;
   }
   .btn {
-    background: var(--clr-primary-5);
-    padding: 0.5rem 1rem;
-    font-size: 1.2rem;
-    border-color: transparent;
-    border-top-right-radius: var(--radius);
-    border-bottom-right-radius: var(--radius);
-    text-transform: capitalize;
-    color: var(--clr-white);
     cursor: pointer;
   }
+  .btn,
   .divider_btn {
+    background: #49a6e9;
     background: var(--clr-primary-5);
     padding: 0.5rem 1rem;
     font-size: 1.2rem;
     border-color: transparent;
+    border-top-right-radius: 0.25rem;
     border-top-right-radius: var(--radius);
+    border-bottom-right-radius: 0.25rem;
     border-bottom-right-radius: var(--radius);
     text-transform: capitalize;
+    color: #fff;
     color: var(--clr-white);
   }
 }
-/*  global classes */
-
-/* section */
 .section {
   width: 90vw;
   margin: 0 auto;
+  max-width: 1170px;
   max-width: var(--max-width);
 }
-
 @media screen and (min-width: 992px) {
   .section {
     width: 95vw;
   }
 }
-
-/*
-=============== 
-Color Generator
-===============
-*/
-
 .container {
   text-align: center;
   display: flex;
@@ -173,62 +145,71 @@ Color Generator
   margin-bottom: 0;
   margin-right: 2rem;
 }
-
 input {
   border-color: transparent;
-  padding: 0.5rem 1rem;
-  font-size: 1.2rem;
+  border-top-left-radius: 0.25rem;
   border-top-left-radius: var(--radius);
+  border-bottom-left-radius: 0.25rem;
   border-bottom-left-radius: var(--radius);
 }
-.btn {
-  background: var(--clr-primary-5);
+.btn,
+input {
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
+}
+.btn {
+  background: #49a6e9;
+  background: var(--clr-primary-5);
   border-color: transparent;
+  border-top-right-radius: 0.25rem;
   border-top-right-radius: var(--radius);
+  border-bottom-right-radius: 0.25rem;
   border-bottom-right-radius: var(--radius);
   text-transform: capitalize;
+  color: #fff;
   color: var(--clr-white);
   cursor: pointer;
 }
 .btn:hover {
   height: 40px;
-  box-shadow: 1px 0.5px 1px cadetblue;
+  box-shadow: 1px 0.5px 1px #5f9ea0;
 }
-
 .divider_btn {
+  background: #49a6e9;
   background: var(--clr-primary-5);
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
   border-color: transparent;
+  border-top-right-radius: 0.25rem;
   border-top-right-radius: var(--radius);
+  border-bottom-right-radius: 0.25rem;
   border-bottom-right-radius: var(--radius);
   text-transform: capitalize;
+  color: #fff;
   color: var(--clr-white);
 }
-
 @media screen and (max-width: 604px) {
   .container h3 {
     font-size: 1rem;
   }
   input {
     margin-top: 10px;
+    right: 0;
+  }
+  .btn,
+  input {
     font-size: 0.85rem;
-    right: 0px;
-    width: 5rem;
   }
   .btn {
     position: absolute;
     top: 14px;
     left: 15em;
-    font-size: 0.85rem;
     right: 1px;
     border-radius: 2px;
   }
   .btn:hover {
     height: 36px;
-    box-shadow: 0px 0px 0px;
+    box-shadow: 0 0 0;
   }
   .divider_btn {
     position: absolute;
@@ -241,6 +222,7 @@ input {
   }
 }
 input.error {
+  border: 2px solid #bb2525;
   border: 2px solid var(--clr-red-dark);
 }
 .colors {
@@ -256,31 +238,25 @@ input.error {
   text-transform: none;
   min-height: 130px;
 }
+.color-value,
 .percent-value {
   margin-bottom: 0;
+  color: #102a42;
   color: var(--clr-grey-1);
 }
-.color-value {
-  color: var(--clr-grey-1);
-  margin-bottom: 0;
-}
-.color-light .color-value {
-  color: var(--clr-white);
-}
+.color-light .color-value,
 .color-light .percent-value {
+  color: #fff;
   color: var(--clr-white);
 }
-
 .alert {
   text-transform: uppercase;
   font-size: 0.85rem;
   margin-top: 0.5rem;
 }
-
 input {
-  border: 0.01px solid lightblue;
+  border: 0.01px solid #add8e6;
 }
-
 body {
   background-image: linear-gradient(
     to right top,
@@ -291,3 +267,4 @@ body {
     #8fbfef
   );
 }
+/*# sourceMappingURL=main.cca98d8a.chunk.css.map */
