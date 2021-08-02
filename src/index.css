@@ -119,6 +119,27 @@ p {
   h4 {
     line-height: 1;
   }
+  .btn {
+    background: var(--clr-primary-5);
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border-color: transparent;
+    border-top-right-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+    text-transform: capitalize;
+    color: var(--clr-white);
+    cursor: pointer;
+  }
+  .divider_btn {
+    background: var(--clr-primary-5);
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border-color: transparent;
+    border-top-right-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+    text-transform: capitalize;
+    color: var(--clr-white);
+  }
 }
 /*  global classes */
 
@@ -175,13 +196,48 @@ input {
   height: 40px;
   box-shadow: 1px 0.5px 1px cadetblue;
 }
-@media screen and (max-width: 576px) {
+
+.divider_btn {
+  background: var(--clr-primary-5);
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border-color: transparent;
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  text-transform: capitalize;
+  color: var(--clr-white);
+}
+
+@media screen and (max-width: 604px) {
   .container h3 {
     font-size: 1rem;
   }
-  input,
-  .btn {
+  input {
+    margin-top: 10px;
     font-size: 0.85rem;
+    right: 0px;
+    width: 5rem;
+  }
+  .btn {
+    position: absolute;
+    top: 14px;
+    left: 15em;
+    font-size: 0.85rem;
+    right: 1px;
+    border-radius: 2px;
+  }
+  .btn:hover {
+    height: 36px;
+    box-shadow: 0px 0px 0px;
+  }
+  .divider_btn {
+    position: absolute;
+    top: 30px;
+    left: 19rem;
+    margin-top: 30px;
+    font-size: 0.85rem;
+    height: 36px;
+    border-radius: 2px;
   }
 }
 input.error {
@@ -221,18 +277,6 @@ input.error {
   margin-top: 0.5rem;
 }
 
-.index_btn {
-  background: var(--clr-primary-5);
-  padding: 0.5rem 1rem;
-  font-size: 1.2rem;
-  border-color: transparent;
-  border-top-right-radius: var(--radius);
-  border-bottom-right-radius: var(--radius);
-  text-transform: capitalize;
-  color: var(--clr-white);
-  cursor: pointer;
-}
-
 input {
   border: 0.01px solid lightblue;
 }
@@ -246,15 +290,4 @@ body {
     #86b9f0,
     #8fbfef
   );
-}
-
-.divider_btn {
-  background: var(--clr-primary-5);
-  padding: 0.5rem 1rem;
-  font-size: 1.2rem;
-  border-color: transparent;
-  border-top-right-radius: var(--radius);
-  border-bottom-right-radius: var(--radius);
-  text-transform: capitalize;
-  color: var(--clr-white);
 }
